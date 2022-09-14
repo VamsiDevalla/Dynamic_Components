@@ -1,1 +1,32 @@
-<router-outlet></router-outlet>
+<div class="wrapper">
+  <div class="section">
+    <nav>
+      <router-outlet name="top-bar"></router-outlet>
+    </nav>
+    <router-outlet></router-outlet>
+  </div>
+  <div class="sidebar">
+    <h3 class="title">Secondary Outlets</h3>
+    <router-outlet name="side-bar"></router-outlet>
+    <ul>
+      <li>
+        <a [routerLink]="'/'" class="active">
+          <span class="icon"><i class="fas fa-home"></i></span>
+          <span class="item">Home</span>
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="'/page1'">
+          <span class="icon"><i class="fas fa-desktop"></i></span>
+          <span class="item">Page 1</span>
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="'/page2'">
+          <span class="icon"><i class="fas fa-user-friends"></i></span>
+          <span class="item">Page 2</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
